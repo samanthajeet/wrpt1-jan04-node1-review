@@ -7,6 +7,8 @@ app.use(express.json());
 const bookCtrl = require('./bookCtrl')
 app.get('/api/books', bookCtrl.getAllBooks)
 app.get('/api/books/:id', bookCtrl.getBook)
+app.post('/api/books', bookCtrl.addBook)
+app.delete('/api/books/:id', bookCtrl.deleteBook)
 
 
 
